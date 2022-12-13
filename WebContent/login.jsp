@@ -18,7 +18,6 @@
 <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 
 	<div class="main">
-
 		<!-- Sing in  Form -->
 		<section class="sign-in">
 			<div class="container">
@@ -48,6 +47,9 @@
 							</div>
 							<div class="form-group">
 								<a href ="forgotPassword.jsp">Forgot Password</a>
+							</div>
+							<div class="form-group">
+								<a href ="ProductCURD">ADMIN</a>
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signin" id="signin"
