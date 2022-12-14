@@ -5,11 +5,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>USER ADMIN</title>
+<title>PRODUCT ADMIN</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Merienda+One">
 <link rel="stylesheet"
@@ -257,11 +258,11 @@ table.table-striped tbody tr:nth-of-type(odd) {
 					<div class="row">
 						<div class="col-sm-10">
 							<h2>
-								Table <b>User</b>
+								Table <b>Detail Product</b>
 							</h2>
 						</div>
 						<div class="col-sm-2">
-							<a href="UserCURD/Add">
+							<a href="DetailProductCURD/Add">
 								<button type="button" class="btn btn-info add-new">
 									<i class="fa fa-plus"></i> Add New
 								</button>
@@ -272,27 +273,27 @@ table.table-striped tbody tr:nth-of-type(odd) {
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th>id</th>
-							<th>uname</th>
-							<th>upwd</th>
-							<th>uemail</th>
-							<th>umobile</th>
-							<th>DiaChi</th>
-							<th>role</th>
+							<th>idproduct</th>
+							<th>idimage</th>
+							<th>soluong</th>
+							<th>image</th>
+							<th>color</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${users}" var="o">
+						<c:forEach items="${products}" var="o">
 							<tr>
-								<td>${o.getId() }</td>
-								<td>${o.getUname() }</td>
-								<td>${o.getUpwd() }</td>							
-								<td>${o.getUemail() }</td>	
-								<td>${o.getUmobile() }</td>	
-								<td>${o.getDiaChi() }</td>	
-								<td>${o.getRole() }</td>	
-								<td><a href="UserCURD/Edit?id=${o.getId()}" class="edit" title="Edit"
+								<td>${o.getIdproduct() }</td>
+								<td>${o.getIdimage() }</td>
+								<td>${o.getSoluong() }</td>
+								<td><div class="img-box">
+									<img src="${o.getImage()}" class="img-fluid" style="width:100px;" alt="">
+								</div></td>
+								
+								<%-- <td>${o.getImage() }</td> --%>
+								<td>${o.getColor() }</td>
+								<td><a href="DetailProductCURD/Edit?id=${o.getIdproduct()}&idimage=${o.getIdimage()}" class="edit" title="Edit"
 									data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
 								</td>
 							</tr>
@@ -315,8 +316,6 @@ table.table-striped tbody tr:nth-of-type(odd) {
 			</div>
 		</div>
 	</div>
-
-
 
 </body>
 

@@ -100,7 +100,8 @@ body {
         	<div class="col-8 offset-4">
 				<h2>Add New Product</h2>
 			</div>	
-      	</div>			
+      	</div>	
+      			
         <div class="form-group row">
 			<label class="col-form-label col-4">Name</label>
 			<div class="col-8">
@@ -132,6 +133,7 @@ body {
             </div>        	
         </div>
 		<div class="form-group row">
+		
 			<div class="col-8 offset-4">
 				<button type="submit" class="btn btn-primary btn-lg">Add</button>
 			</div>  

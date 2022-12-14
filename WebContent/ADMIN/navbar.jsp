@@ -10,17 +10,13 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-light">
 		<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 			<div class="navbar-nav">
-				<a href="#" class="nav-item nav-link active">Home</a>
-				<a href="#" class="nav-item nav-link">User</a>
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Product </a>
-					<div class="dropdown-menu">
-						<a href="#" class="dropdown-item">Details product</a>
-					</div>
-				</div>
-				<a href="#" class="nav-item nav-link">Cart</a>
-				<a href="#" class="nav-item nav-link">Bill</a>
-				<a href="#" class="nav-item nav-link">Contact</a>
+				<!-- <a href="ADMIN/admin.html" class="nav-item nav-link active">Home</a> -->
+				<a href="UserCURD" class="nav-item nav-link">User</a>
+				<a href="ProductCURD" class="nav-item nav-link">Product</a>
+				<a href="DetailProductCURD" class="nav-item nav-link">DetailProduct</a>				
+				<a href="CartCRUD" class="nav-item nav-link">Cart</a>
+				<!-- <a href="#" class="nav-item nav-link">Bill</a>
+				<a href="#" class="nav-item nav-link">Contact</a> -->
 			</div>
 			<form class="navbar-form form-inline">
 				<div class="input-group search-box">

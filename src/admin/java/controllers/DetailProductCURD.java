@@ -11,14 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
-
-import admin.java.entities.Product;
-import admin.java.models.ProductModel;
+import admin.java.entities.DetailProduct;
+import admin.java.models.DetailProductModel;
 import admin.java.utils.ServletUtils;
 
-@WebServlet(urlPatterns = { "/ProductCURD", "/ADMIN/ProductCURD", "/ProductCURD/*" })
-public class ProductCURD extends HttpServlet {
+
+@WebServlet(urlPatterns = { "/DetailProductCURD", "/ADMIN/DetailProductCURD", "/DetailProductCURD/*" })
+public class DetailProductCURD extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -33,27 +32,30 @@ public class ProductCURD extends HttpServlet {
 
 		switch (path) {
 		case "/Index":
-			List<Product> list = ProductModel.findAll();
+			List<DetailProduct> list = DetailProductModel.findAll();
 			System.out.print(list);
 			request.setAttribute("products", list);
-			ServletUtils.forward("ADMIN/product.jsp", request, response);
+			ServletUtils.forward("ADMIN/detailproduct.jsp", request, response);
 			break;
 
 		case "/Add":
-			ServletUtils.redirect("/CRUD/ADD/addproductform.jsp", request, response);
+			ServletUtils.redirect("/CRUD/ADD/adddetailproductform.jsp", request, response);
 			break;
 		case "/Edit":
 			int id = 0;
+			int idimage =  0 ;
 			try {
 				id = Integer.parseInt(request.getParameter("id"));
+				idimage = Integer.parseInt(request.getParameter("idimage"));
 			} catch (NumberFormatException e) {
 			}
 			System.out.print(id);
-			Product c = ProductModel.findById(id);
+			System.out.print(idimage);
+			DetailProduct c = DetailProductModel.findById(id,idimage);
 			if (c != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("product", c);
-				ServletUtils.redirect("/CRUD/EDIT/editproductform.jsp", request, response);
+				ServletUtils.redirect("/CRUD/EDIT/editdetailproductform.jsp", request, response);
 			} else {
 				ServletUtils.forward("/Index", request, response);
 			}

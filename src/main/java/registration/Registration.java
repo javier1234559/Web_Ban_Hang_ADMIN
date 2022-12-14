@@ -43,8 +43,8 @@ public class Registration extends HttpServlet {
 		}else {
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
-//				con = DriverManager.getConnection("jdbc:mysql://b060c3fa72ae89:0e6af735@us-cdbr-east-06.cleardb.net/heroku_9921352427430fd?reconnect=true","b060c3fa72ae89","0e6af735");
-				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopkeyboard","root","nhat2382002");
+				con = DriverManager.getConnection("jdbc:mysql://b060c3fa72ae89:0e6af735@us-cdbr-east-06.cleardb.net/heroku_9921352427430fd?reconnect=true","b060c3fa72ae89","0e6af735");
+//				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopkeyboard","root","nhat2382002");
 				PreparedStatement pst = con.prepareStatement("insert into users(uname,upwd,uemail,umobile) values(?,?,?,?) ");
 				pst.setString(1, uname);
 				pst.setString(2, upwd);

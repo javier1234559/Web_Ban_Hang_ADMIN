@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,52 +95,51 @@ body {
 </head>
 <body>
 <div class="signup-form">
-    <form action="DetailProductEditServlet" method="post" class="form-horizontal">
+    <form action="UserAddServlet" method="post" class="form-horizontal">
       	<div class="row">
         	<div class="col-8 offset-4">
-				<h2>Edit Product</h2>
+				<h2>Add New User</h2>
 			</div>	
-      	</div>		
-      	<div class="form-group row">
-			<label class="col-form-label col-4">Id</label>
-			<div class="col-8">
-                <input type="text" class="form-control" name="idproduct"  value="${product.getIdproduct() }" required="required">
-            </div>        	
-        </div>	
-        
+      	</div>			
         <div class="form-group row">
 			<label class="col-form-label col-4">Name</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="nameproduct"  value="${product.getNameproduct() }" required="required">
+                <input type="text" class="form-control" name="uname" required="required">
             </div>        	
         </div>
 		<div class="form-group row">
-			<label class="col-form-label col-4">Price</label>
+			<label class="col-form-label col-4">Password</label>
 			<div class="col-8">
-                <input type="number" class="form-control" name="price" value="${product.getPrice() }" required="required">
+                <input type="password" class="form-control" name="upwd" required="required">
             </div>        	
         </div>
 		<div class="form-group row">
-			<label class="col-form-label col-4">Category</label>
+			<label class="col-form-label col-4">Email</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="category" value="${product.getCategory() }" required="required">
+                <input type="email" class="form-control" name="uemail" required="required">
             </div>        	
         </div>
 		<div class="form-group row">
-			<label class="col-form-label col-4">Image</label>
+			<label class="col-form-label col-4">Phone</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="image" value="${product.getImage() }" required="required">
+                <input type="number" class="form-control" name="umobile" required="required">
             </div>        	
         </div>
 		<div class="form-group row">
-			<label class="col-form-label col-4">Description</label>
+			<label class="col-form-label col-4">Dia Chi</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="description" value="${product.getMoTa() }" required="required">
+                <input type="text" class="form-control" name="DiaChi" required="required">
+            </div>        	
+        </div>
+        <div class="form-group row">
+			<label class="col-form-label col-4">Role</label>
+			<div class="col-8">
+                <input type="number" class="form-control" name="role" required="required">
             </div>        	
         </div>
 		<div class="form-group row">
 			<div class="col-8 offset-4">
-				<button type="submit" class="btn btn-primary btn-lg">Edit</button>
+				<button type="submit" class="btn btn-primary btn-lg">Add</button>
 			</div>  
 		</div>		      
     </form>

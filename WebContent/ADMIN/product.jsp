@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap All in One Navbar</title>
+<title>PRODUCT ADMIN</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Merienda+One">
 <link rel="stylesheet"
@@ -289,7 +289,10 @@ table.table-striped tbody tr:nth-of-type(odd) {
 								<td>${o.getNameproduct() }</td>
 								<td><fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${o.price}"/>VNĐ</td>								
 								<td>${o.getCategory() }</td>
-								<td>${o.getImage() }</td>
+								<td><div class="img-box">
+									<img src="${o.getImage()}" class="img-fluid" alt="">
+								</div></td>
+								<%-- <td>${o.getImage() }</td> --%>
 								<td>${o.getMoTa() }</td>
 								<td><a href="ProductCURD/Edit?id=${o.getIdproduct()}" class="edit" title="Edit"
 									data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>

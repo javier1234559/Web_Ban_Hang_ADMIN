@@ -16,12 +16,12 @@ import main.java.entities.productDetail;
 
 public class ProductDao {
         private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
-//        private static final String DB_URL = "jdbc:mysql://b060c3fa72ae89:0e6af735@us-cdbr-east-06.cleardb.net/heroku_9921352427430fd?reconnect=true";
-//        private static final String ID = "b060c3fa72ae89";
-//        private static final String PASS = "0e6af735";
-        private static final String DB_URL = "jdbc:mysql://localhost:3306/shopkeyboard";
-        private static final String ID = "root";
-        private static final String PASS = "nhat2382002";
+        private static final String DB_URL = "jdbc:mysql://b060c3fa72ae89:0e6af735@us-cdbr-east-06.cleardb.net/heroku_9921352427430fd?reconnect=true";
+        private static final String ID = "b060c3fa72ae89";
+        private static final String PASS = "0e6af735";
+//        private static final String DB_URL = "jdbc:mysql://localhost:3306/shopkeyboard";
+//        private static final String ID = "root";
+//        private static final String PASS = "nhat2382002";
 
         
         private static final String DELETE = "DELETE FROM user WHERE id=?";
